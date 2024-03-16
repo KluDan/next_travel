@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
-const isDev = (process.env.NODE_ENV = "production");
+const isProd = (process.env.NODE_ENV = "production");
 
 const nextConfig = {
-  basePath: !isDev ? "" : "/next_travel",
+  basePath: isProd ? "/next_travel" : "",
   output: "export",
   distDir: "dist",
+  images: {
+    path: "/",
+  },
 };
 
 module.exports = nextConfig;
