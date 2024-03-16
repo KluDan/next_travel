@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
+const isDev = (process.env.NODE_ENV = "development");
 
 const nextConfig = {
-  basePath: "/next_travel",
+  basePath: isDev ? "" : "/next_travel",
   output: "export",
   distDir: "dist",
   images: {
