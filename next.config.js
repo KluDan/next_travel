@@ -6,7 +6,7 @@ const nextConfig = {
   output: "export",
   distDir: "dist",
   images: {
-    path: "/",
+    path: "/next_travel",
   },
 };
 
